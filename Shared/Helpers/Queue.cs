@@ -6,7 +6,7 @@ namespace Learning.Shared.Classes.Helpers {
         private const int MinimumGrow = 4;
         private const int ShrinkThreshold = 32;
         private const int GrowFactor = 100;
-        private Object[] array;
+        private Object?[] array;
         private int size;
         private int head;
         private int tail;
@@ -20,7 +20,7 @@ namespace Learning.Shared.Classes.Helpers {
 
         public int Count => size;
 
-        public virtual Object Peek() {
+        public virtual Object? Peek() {
             if (size == 0) {
                 throw new InvalidOperationException("InvalidOperation_EmptyStack");
             }
@@ -28,11 +28,11 @@ namespace Learning.Shared.Classes.Helpers {
             return array[head];
         }
 
-        public virtual Object Dequeue() {
+        public virtual Object? Dequeue() {
             if (Count == 0)
                 throw new InvalidOperationException("InvalidOperation_EmptyQueue");
 
-            Object removed = array[head];
+            Object? removed = array[head];
             array[head] = null;
             head = (head + 1) % array.Length;
             size--;

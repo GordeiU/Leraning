@@ -3,7 +3,7 @@ using System;
 namespace Learning.Shared.Classes.Helpers {
     public class Stack {
         private const int DefaultCapacity = 10;
-        private Object[] array;
+        private Object?[] array;
         private int size;
 
         public Stack() {
@@ -13,7 +13,7 @@ namespace Learning.Shared.Classes.Helpers {
 
         public int Count => size;
 
-        public virtual Object Peek() {
+        public virtual Object? Peek() {
             if (size == 0) {
                 throw new InvalidOperationException("InvalidOperation_EmptyStack");
             }
@@ -21,12 +21,12 @@ namespace Learning.Shared.Classes.Helpers {
             return array[size - 1];
         }
 
-        public virtual Object Pop() {
+        public virtual Object? Pop() {
             if (size == 0) {
                 throw new InvalidOperationException("InvalidOperation_EmptyStack");
             }
 
-            Object obj = array[--size];
+            Object? obj = array[--size];
             array[size] = null; // Free memory quicker.
             return obj;
         }
