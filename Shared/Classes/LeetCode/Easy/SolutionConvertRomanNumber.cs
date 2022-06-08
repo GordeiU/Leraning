@@ -20,18 +20,12 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
                 if (RomanIntegerValues[number[idx]] < RomanIntegerValues[number[idx + 1]]) {
                     result += RomanIntegerValues[number[idx + 1]] - RomanIntegerValues[number[idx]];
                     idx++;
-                }
-
-                if (RomanIntegerValues[number[idx]] == RomanIntegerValues[number[idx + 1]]) {
+                } else if (RomanIntegerValues[number[idx]] == RomanIntegerValues[number[idx + 1]]) {
                     result += (RomanIntegerValues[number[idx]] * 2);
                     idx++;
-                }
-
-                if (RomanIntegerValues[number[idx]] > RomanIntegerValues[number[idx + 1]]) {
+                } else {
                     result += RomanIntegerValues[number[idx]];
                 }
-
-                idx++;
             }
 
             if (idx < number.Length) {
