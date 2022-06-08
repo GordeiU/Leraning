@@ -26,8 +26,8 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
             int checkCount = count / 2;
 
             while (checkCount > 0) {
-                int last = (int)stack.Pop();
-                int first = (int)queue.Dequeue();
+                int last = (int)stack.Pop()!;
+                int first = (int)queue.Dequeue()!;
 
                 if (last != first) {
                     return false;
