@@ -4,13 +4,13 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Learning.UnitTests.LeetCode.Easy {
     [TestClass]
-    public class SolutionTwoSumTest {
+    public class TwoSumSolutionTest {
         private readonly int[] Numbers = new int[4] { 1, 2, 3, 4 };
-        private SolutionTwoSum TestingClass { get; set; } = default!;
+        private TwoSumSolution TestingClass { get; set; } = default!;
 
         [TestInitialize]
         public void TestInitialize() {
-            TestingClass = new SolutionTwoSum();
+            TestingClass = new TwoSumSolution();
         }
 
         [TestMethod]

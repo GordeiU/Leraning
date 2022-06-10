@@ -3,12 +3,12 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Learning.UnitTests.LeetCode.Easy {
     [TestClass]
-    public class SolutionIsPalindromeNumberTest {
-        private SolutionIsPalindromeNumber TestingClass { get; set; } = default!;
+    public class IsPalindromeNumberSolutionTest {
+        private IsPalindromeNumberSolution TestingClass { get; set; } = default!;
 
         [TestInitialize]
         public void TestInitialize() {
-            TestingClass = new SolutionIsPalindromeNumber();
+            TestingClass = new IsPalindromeNumberSolution();
         }
 
         [TestMethod]

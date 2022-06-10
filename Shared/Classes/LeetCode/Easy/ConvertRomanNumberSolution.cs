@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
-    public static class SolutionConvertRomanNumber {
+    public static class ConvertRomanNumberSolution {
         private static readonly IReadOnlyDictionary<char, int> RomanIntegerValues = new Dictionary<char, int> {
                 {'I', 1},
                 {'V', 5},

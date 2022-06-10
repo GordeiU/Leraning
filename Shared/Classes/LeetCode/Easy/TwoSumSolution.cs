@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
-    public class SolutionTwoSum {
+    public class TwoSumSolution {
         private Dictionary<int, int> memory = new Dictionary<int, int>();
 
         public int[] FindIfTwoComplementsExist(int[] numbers, int target) {

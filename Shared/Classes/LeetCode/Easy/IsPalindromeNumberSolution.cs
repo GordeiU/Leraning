@@ -1,12 +1,12 @@
 using Learning.Shared.Classes.Helpers;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
-    public class SolutionIsPalindromeNumber {
+    public class IsPalindromeNumberSolution {
         private Stack stack;
         private Queue queue;
         private int count;
 
-        public SolutionIsPalindromeNumber() {
+        public IsPalindromeNumberSolution() {
             stack= new Stack();
             queue = new Queue();
             count = 0;
