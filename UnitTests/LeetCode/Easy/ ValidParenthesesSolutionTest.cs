@@ -18,20 +18,26 @@ namespace Learning.UnitTests.LeetCode.Easy {
         }
 
         [TestMethod]
-        public void IsValid_NotValidMissingOpeningEnd() {
+        public void IsValid_NotValid_MissingOpeningEnd() {
             bool actual = TestingClass.IsValid("()[]{}}");
             Assert.IsFalse(actual);
         }
 
         [TestMethod]
-        public void IsValid_NotValidMissingOpeningStart() {
+        public void IsValid_NotValid_MissingOpeningStart() {
             bool actual = TestingClass.IsValid("]()[]{}}");
             Assert.IsFalse(actual);
         }
 
         [TestMethod]
-        public void IsValid_NotValidMismatch() {
+        public void IsValid_NotValid_Mismatch() {
             bool actual = TestingClass.IsValid("[}]");
+            Assert.IsFalse(actual);
+        }
+
+        [TestMethod]
+        public void IsValid_NotValid_NoClosing() {
+            bool actual = TestingClass.IsValid("[{(((((");
             Assert.IsFalse(actual);
         }
     }
