@@ -15,7 +15,7 @@ namespace Learning.Shared.Classes.Helpers {
 
         public virtual Object? Peek() {
             if (size == 0) {
-                throw new InvalidOperationException("InvalidOperation_EmptyStack");
+                return null;;
             }
 
             return array[size - 1];
