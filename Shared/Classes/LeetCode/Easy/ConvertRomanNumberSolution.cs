@@ -9,7 +9,7 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
                 {'L', 50},
                 {'C', 100},
                 {'D', 500},
-                {'M', 1000}
+                {'M', 1000},
             };
 
         public static int ConvertRomanNumber(string number) {
