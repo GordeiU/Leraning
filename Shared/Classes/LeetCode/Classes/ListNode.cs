@@ -1,4 +1,4 @@
-namespace Learning.LeetCode.Classes {
+namespace Learning.Shared.Classes.LeetCode.Classes {
     public class ListNode {
         public int val;
         public ListNode? next;

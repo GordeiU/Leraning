@@ -1,16 +1,13 @@
-using Learning.LeetCode.Classes;
+using Learning.Shared.Classes.LeetCode.Classes;
 
-namespace Learning.Shared.Classes.Helpers.LeetCode {
+namespace Learning.Shared.Helpers.LeetCode {
     public static class LinkedListGenerationUtility {
-        public static ListNode GenerateIntLinkedListFromArray(int[] dataArray) {
-            ListNode root = new ListNode();
-
+        public static ListNode? GenerateIntLinkedListFromArray(int[] dataArray) {
             if (dataArray.Length == 0) {
-                return root;
+                return null;
             }
 
-            root.val = dataArray[0];
-
+            ListNode root = new ListNode(val: dataArray[0]);
             ListNode cur = root;
 
             for (int idx = 1; idx < dataArray.Length; idx++) {
