@@ -2,6 +2,9 @@ using System.Collections.Generic;
 using Learning.Shared.Classes.Helpers;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
+    /// <summary>
+    /// Class <c>ValidParenthesesSolution</c> Solution to the: https://leetcode.com/problems/valid-parentheses/
+    /// </summary>
     public class ValidParenthesesSolution {
         private static readonly IReadOnlyDictionary<char, char> MatchingParenthesis = new Dictionary<char, char> {
                 {'}','{'},

@@ -1,6 +1,9 @@
 using Learning.Shared.Classes.Helpers;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
+    /// <summary>
+    /// Class <c>IsPalindromeNumberSolution</c> Solution to the: https://leetcode.com/problems/palindrome-number/
+    /// </summary>
     public class IsPalindromeNumberSolution {
         private Stack stack;
         private Queue queue;

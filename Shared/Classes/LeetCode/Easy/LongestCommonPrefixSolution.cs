@@ -1,4 +1,7 @@
 namespace Learning.Shared.Classes.LeetCode.Easy {
+    /// <summary>
+    /// Class <c>LongestCommonPrefixSolution</c> Solution to the: https://leetcode.com/problems/longest-common-prefix/
+    /// </summary>
     public static class LongestCommonPrefixSolution {
         public static string FindLongestCommonPrefix(string[] words) {
             int stringLength = words[0].Length;

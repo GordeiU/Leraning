@@ -1,6 +1,9 @@
 using Learning.Shared.Classes.LeetCode.Classes;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
+    /// <summary>
+    /// Class <c>MergeTwoSortedLinkedListsSolution</c> Solution to the: https://leetcode.com/problems/merge-two-sorted-lists/
+    /// </summary>
     public class MergeTwoSortedLinkedListsSolution {
         public ListNode? MergeTwoLists(ListNode? firstListCurrent, ListNode? secondListCurrent) {
             ListNode? root;

@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
+    /// <summary>
+    /// Class <c>ConvertRomanNumberSolution</c> Solution to the: https://leetcode.com/problems/roman-to-integer/
+    /// </summary>
     public static class ConvertRomanNumberSolution {
         private static readonly IReadOnlyDictionary<char, int> RomanIntegerValues = new Dictionary<char, int> {
                 {'I', 1},

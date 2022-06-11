@@ -1,6 +1,9 @@
 using System.Collections.Generic;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
+    /// <summary>
+    /// Class <c>TwoSumSolution</c> Solution to the: https://leetcode.com/problems/two-sum/
+    /// </summary>
     public class TwoSumSolution {
         private Dictionary<int, int> memory = new Dictionary<int, int>();
 
