@@ -21,5 +21,21 @@ namespace Learning.Shared.Classes.Helpers.LeetCode {
 
             return root;
         }
+
+        public static string GetStringValueOfLinkedList(ListNode? cur) {
+            string result = string.Empty;
+
+            while (cur != null) {
+                if (cur.next != null) {
+                    result += $"{cur.val}-";
+                } else {
+                    result += cur.val.ToString();
+                }
+
+                cur = cur.next;
+            }
+
+            return result;
+        }
     }
 }
