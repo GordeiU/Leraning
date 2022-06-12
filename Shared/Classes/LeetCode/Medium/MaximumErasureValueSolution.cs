@@ -6,22 +6,19 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
     /// </summary>
     public class MaximumErasureValueSolution {
         public int MaximumUniqueSubArray(int[] numbers) {
-            Dictionary<int, int> memory = new Dictionary<int, int>();
+            HashSet<int> memory = new HashSet<int>();
+            int startIdx = 0;
             int intermediateHighest = 0;
             int highest = intermediateHighest;
 
             for (int idx = 0; idx < numbers.Length; idx++) {
-                if (memory.ContainsKey(numbers[idx])) {
-                    intermediateHighest = 0;
-
-                    idx = memory[numbers[idx]];
-                    memory.Clear();
-
-                    continue;
-                } else {
-                    memory[numbers[idx]] = idx;
+                while (memory.Contains(numbers[idx])) {
+                    intermediateHighest -= numbers[startIdx];
+                    memory.Remove(numbers[startIdx]);
+                    startIdx++;
                 }
 
+                memory.Add(numbers[idx]);
                 intermediateHighest += numbers[idx];
 
                 if (intermediateHighest > highest) {
