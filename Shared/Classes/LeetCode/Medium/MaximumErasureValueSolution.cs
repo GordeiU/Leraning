@@ -5,8 +5,6 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
     /// Class <c>MaximumErasureValueSolution</c> Solution to the: https://leetcode.com/problems/maximum-erasure-value/
     /// </summary>
     public class MaximumErasureValueSolution {
-        public int HighestScore { get; private set; }
-
         public int MaximumUniqueSubArray(int[] numbers) {
             Dictionary<int, int> memory = new Dictionary<int, int>();
             int intermediateHighest = 0;
