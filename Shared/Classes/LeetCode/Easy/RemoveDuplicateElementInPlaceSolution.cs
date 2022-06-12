@@ -6,7 +6,14 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
         public int RemoveElement(int[] numbers, int val) {
             int masterIdx = 0;
 
-            return masterIdx + 1;
+            for (int idx = 0; idx < numbers.Length; idx++) {
+                if (numbers[idx] != val) {
+                    numbers[masterIdx] = numbers[idx];
+                    masterIdx++;
+                }
+            }
+
+            return masterIdx;
         }
     }
 }
