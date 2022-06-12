@@ -21,7 +21,7 @@ namespace Learning.UnitTests.LeetCode.Easy {
         }
 
         [TestMethod]
-        public void FindIfTwoComplementsExist_ShortTestTwo() {
+        public void RemoveDuplicates_ShortTestTwo() {
             int[] numbers = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
             int actual = TestingClass.RemoveDuplicates(numbers);
             int expected = 5;

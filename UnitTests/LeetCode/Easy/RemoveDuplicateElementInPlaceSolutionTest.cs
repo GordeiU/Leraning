@@ -12,7 +12,7 @@ namespace Learning.UnitTests.LeetCode.Easy {
         }
 
         [TestMethod]
-        public void RemoveDuplicates_ShortTestOne() {
+        public void RemoveElement_ShortTestOne() {
             int[] numbers = new int[] { 3, 2, 2, 3 };
             int actual = TestingClass.RemoveElement(numbers, 3);
             int expected = 2;
@@ -21,7 +21,7 @@ namespace Learning.UnitTests.LeetCode.Easy {
         }
 
         [TestMethod]
-        public void FindIfTwoComplementsExist_ShortTestTwo() {
+        public void RemoveElement_ShortTestTwo() {
             int[] numbers = new int[] { 0, 1, 2, 2, 3, 0, 4, 2 };
             int actual = TestingClass.RemoveElement(numbers, 2);
             int expected = 5;
