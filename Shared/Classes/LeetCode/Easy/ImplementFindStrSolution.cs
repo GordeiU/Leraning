@@ -18,19 +18,18 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
                     intermediateIdx = idx;
 
                     while (searchString[intermediateIdx] == subString[intermediateSubstringIdx]) {
-                        if (intermediateIdx == searchString.Length) {
-                            return -1;
+                        if (intermediateSubstringIdx == subString.Length - 1) {
+                            return idx;
                         }
 
-                        if (intermediateSubstringIdx +  1 == subString.Length) {
-                            return idx;
+                        if (intermediateIdx == searchString.Length - 1) {
+                            return -1;
                         }
 
                         intermediateIdx++;
                         intermediateSubstringIdx++;
                     }
 
-                    idx = intermediateIdx;
                     intermediateSubstringIdx = 0;
                 }
             }
