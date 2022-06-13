@@ -47,9 +47,16 @@ namespace Learning.UnitTests.LeetCode.Easy {
         }
 
         [TestMethod]
-        public void StrStr_SubStringExistInSecondTry() {
+        public void StrStr_SubStringExistInSecondTryOne() {
             int actual = TestingClass.StrStr("hellolll", "lll");
             int expected = 5;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void StrStr_SubStringExistInSecondTryTwo() {
+            int actual = TestingClass.StrStr("mississippi", "issip");
+            int expected = 4;
             Assert.AreEqual(expected, actual);
         }
     }
