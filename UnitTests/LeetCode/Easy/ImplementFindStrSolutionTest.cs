@@ -19,6 +19,13 @@ namespace Learning.UnitTests.LeetCode.Easy {
         }
 
         [TestMethod]
+        public void StrStr_SubStringIsBiggerThanSearchString() {
+            int actual = TestingClass.StrStr("aaa", "aaaa");
+            int expected = 0;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void StrStr_SubStringExists() {
             int actual = TestingClass.StrStr("hello", "ll");
             int expected = 2;
