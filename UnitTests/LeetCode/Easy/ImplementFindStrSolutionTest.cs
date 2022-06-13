@@ -31,5 +31,19 @@ namespace Learning.UnitTests.LeetCode.Easy {
             int expected = -1;
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void StrStr_SubStringPartiallyExist() {
+            int actual = TestingClass.StrStr("hello", "lot");
+            int expected = -1;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void StrStr_SubStringExistInSecondTry() {
+            int actual = TestingClass.StrStr("hellolll", "lll");
+            int expected = 5;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
