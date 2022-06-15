@@ -27,11 +27,19 @@ namespace Learning.UnitTests.LeetCode.Medium {
             Assert.AreEqual(expected, actual);
         }
 
-                [TestMethod]
+        [TestMethod]
         public void LongestStrChain_ShortThree() {
             string[] words = new string[] { "abcd", "dbqca" };
             int actual = TestingClass.LongestStrChain(words);
             int expected = 1;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void LongestStrChain_ShortFour() {
+            string[] words = new string[] { "a", "b", "ab", "bac" };
+            int actual = TestingClass.LongestStrChain(words);
+            int expected = 2;
             Assert.AreEqual(expected, actual);
         }
     }
