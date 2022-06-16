@@ -31,5 +31,15 @@ namespace Learning.UnitTests.LeetCode.Medium {
 
             Assert.AreEqual(expectedPossibleAnswers, actual);
         }
+
+        [TestMethod]
+        public void LongestPalindrome_BiggerEven() {
+            string word = "abcba";
+
+            string actual = TestingClass.LongestPalindrome(word);
+            string expectedPossibleAnswers = "abcba";
+
+            Assert.AreEqual(expectedPossibleAnswers, actual);
+        }
     }
 }
