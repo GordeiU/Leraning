@@ -25,10 +25,12 @@ namespace Learning.UnitTests.LeetCode.Hard {
         public void MinCameraCover_RootTwoChildren() {
             TreeNode root = new TreeNode();
             TreeNode left = new TreeNode();
-            TreeNode right = new TreeNode();
+            TreeNode leftLeft = new TreeNode();
+            TreeNode leftRight = new TreeNode();
 
             root.left = left;
-            root.right = right;
+            left.right = leftRight;
+            left.left = leftLeft;
 
             int actual = TestingClass.MinCameraCover(root);
             int expected = 1;
