@@ -1,7 +1,7 @@
 using Learning.Shared.Classes.LeetCode.Medium;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Learning.UnitTests.LeetCode.Easy {
+namespace Learning.UnitTests.LeetCode.Medium {
     [TestClass]
     public class DeleteOperationTwoStringsSolutionTest {
         private DeleteOperationTwoStringsSolution TestingClass { get; set; } = default!;

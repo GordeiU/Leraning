@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Learning.Shared.Classes.LeetCode.Medium;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Learning.UnitTests.LeetCode.Easy {
+namespace Learning.UnitTests.LeetCode.Medium {
     [TestClass]
     public class TriangleSolutionTest {
         private TriangleSolution TestingClass { get; set; } = default!;
