@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Learning.Shared.Classes.Helpers;
 
 namespace Learning.Shared.Classes.LeetCode.Easy {
     /// <summary>
@@ -12,10 +11,10 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
                 {')', '('},
             };
         private static readonly HashSet<char> OpeningParentheses = new HashSet<char> { '{', '[', '(' };
-        private Stack stack;
+        private Stack<char> stack;
 
         public ValidParenthesesSolution() {
-            stack = new Stack();
+            stack = new Stack<char>();
         }
 
         public bool IsValid(string brackets) {

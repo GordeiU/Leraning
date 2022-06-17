@@ -5,12 +5,12 @@ namespace Learning.Shared.Classes.LeetCode.Easy {
     /// Class <c>IsPalindromeNumberSolution</c> Solution to the: https://leetcode.com/problems/palindrome-number/
     /// </summary>
     public class IsPalindromeNumberSolution {
-        private Stack stack;
+        private Stack<int> stack;
         private Queue queue;
         private int count;
 
         public IsPalindromeNumberSolution() {
-            stack= new Stack();
+            stack= new Stack<int>();
             queue = new Queue();
             count = 0;
         }

@@ -1,13 +1,13 @@
 using System;
 
 namespace Learning.Shared.Classes.Helpers {
-    public class Stack {
+    public class Stack<T> {
         private const int DefaultCapacity = 10;
-        private Object?[] array;
+        private T?[] array;
         private int size;
 
         public Stack() {
-            array = new Object[DefaultCapacity];
+            array = new T[DefaultCapacity];
             size = 0;
         }
 
@@ -21,19 +21,21 @@ namespace Learning.Shared.Classes.Helpers {
             return array[size - 1];
         }
 
-        public virtual Object? Pop() {
+        public bool IsEmpty => size == 0;
+
+        public virtual T? Pop() {
             if (size == 0) {
                 throw new InvalidOperationException("InvalidOperation_EmptyStack");
             }
 
-            Object? obj = array[--size];
-            array[size] = null; // Free memory quicker.
+            T? obj = array[--size];
+            array[size] = default(T); // Free memory quicker.
             return obj;
         }
 
-        public virtual void Push(Object obj) {
+        public virtual void Push(T obj) {
             if (size == array.Length) {
-                Object[] newArray = new Object[2 * array.Length];
+                T[] newArray = new T[2 * array.Length];
                 Array.Copy(array, 0, newArray, 0, size);
                 array = newArray;
             }
