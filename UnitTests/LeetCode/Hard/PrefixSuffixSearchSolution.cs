@@ -38,8 +38,8 @@ namespace Learning.UnitTests.LeetCode.Hard {
 
         [TestMethod]
         public void CheckIfExists_TwoWordExists_SecondWordLonger() {
-            // Both match but as per task should return longer word i.e apples
-            string[] words = new string[] { "apple", "apples" };
+            // Both match but as per task should return longer word i.e appsdfdsfsdle
+            string[] words = new string[] { "apple", "appsdfdsfsdle" };
             PrefixSuffixSearchSolution TestingClass = new PrefixSuffixSearchSolution(words);
 
             int actual = TestingClass.F("ap", "le");
@@ -48,8 +48,19 @@ namespace Learning.UnitTests.LeetCode.Hard {
         }
 
         [TestMethod]
+        public void CheckIfExists_ThreeWordExists_SecondWordLonger() {
+            // Both match but as per task should return longer word i.e appsdfdsfsdle
+            string[] words = new string[] { "apple", "appsdfdsfsdle", "applele" };
+            PrefixSuffixSearchSolution TestingClass = new PrefixSuffixSearchSolution(words);
+
+            int actual = TestingClass.F("ap", "le");
+            int expected = 1;
+            Assert.AreEqual(expected, actual);
+        }
+
+
+        [TestMethod]
         public void CheckIfExists_MoreWordExists() {
-            // Both match but as per task should return longer word i.e apples
             string[] words = new string[] {
                 "Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing",
                 "elit", "Aenean", "venenatis", "convallis", "porttitor", "Integer",
