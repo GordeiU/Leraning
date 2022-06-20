@@ -28,5 +28,14 @@ namespace Learning.UnitTests.LeetCode.Medium {
             int expected = 31;
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void MinDistance_ShortThree() {
+            string[] words = new string[] { "aab", "bab", "abb" };
+
+            int actual = TestingClass.MinimumLengthEncoding(words);
+            int expected = 12;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }

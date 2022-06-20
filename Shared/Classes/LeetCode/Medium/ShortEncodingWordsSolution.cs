@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-
 namespace Learning.Shared.Classes.LeetCode.Medium {
     /// <summary>
     /// Class <c>ShortEncodingWordsSolution</c> Solution to the: https://leetcode.com/problems/short-encoding-of-words/
@@ -11,9 +9,11 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
         }
 
         public int MinimumLengthEncoding(string[] words) {
-            foreach (string word in words) {
-                trie.InsertWord(word);
+            for (int idx = 0; idx < words.Length; idx++) {
+                trie.InsertWord(words[idx], idx);
             }
+
+            trie.ReWeightTrie();
 
             return trie.GetEncodingLength();
         }
@@ -27,38 +27,69 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
 
             public int GetEncodingLength() => Root.DepthFirstSearch();
 
-            public void InsertWord(string word) {
+            public void ReWeightTrie() {
+                Root.ReWeightNode();
+            }
+
+            public void InsertWord(string word, int wordIdx) {
                 TrieNode? cur = Root;
 
                 for (int idx = word.Length - 1; idx >= 0; idx--) {
-                    if (!cur!.Children.ContainsKey(word[idx])) {
-                        cur.Children[word[idx]] = new TrieNode();
+                    if (cur!.Children[word[idx] - 'a'] == null) {
+                        cur.Children[word[idx] - 'a'] = new TrieNode();
+                        cur.IncrementChildrenCount();
                     }
 
-                    cur = cur.Children[word[idx]];
+                    cur = cur.Children[word[idx] - 'a'];
                 }
             }
         }
 
         private class TrieNode {
-            public Dictionary<char, TrieNode> Children { get; set; }
+            private int weight;
+            private int ChildrenCount { get; set; }
+            public TrieNode[] Children { get; set; }
 
             public TrieNode() {
-                Children = new Dictionary<char, TrieNode>();
+                weight = 1;
+                Children = new TrieNode[26];
+                ChildrenCount = 0;
+            }
+
+            public void IncrementChildrenCount() {
+                ChildrenCount++;
+            }
+
+            public int ReWeightNode() {
+                if (ChildrenCount == 0) {
+                    weight = 1;
+                } else {
+                    weight = 0;
+
+                    foreach (TrieNode node in Children) {
+                        if (node != null) {
+                            weight += node.ReWeightNode();
+                        }
+                    }
+                }
+
+                return weight;
             }
 
             public int DepthFirstSearch() {
-                if (Children.Count == 0) {
-                    return 1;
+                if (ChildrenCount == 0) {
+                    return weight;
                 }
 
                 int result = 0;
 
-                foreach (KeyValuePair<char, TrieNode> pair in Children) {
-                    result += pair.Value.DepthFirstSearch() + 1;
+                foreach (TrieNode node in Children) {
+                    if (node != null) {
+                        result += node.DepthFirstSearch();
+                    }
                 }
 
-                return result;
+                return result + weight;
             }
         }
     }
