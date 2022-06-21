@@ -16,7 +16,7 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
                 if (gap <= 0) {
                     continue;
                 }
-                
+
                 if (ladders == 0 && bricks < gap) {
                     return idx;
                 }
@@ -28,11 +28,15 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
                 }
 
                 if (queue.Count > 0) {
-                    bricks += queue.Dequeue();
+                    int biggestGapInsideQueue = queue.Dequeue();
+
+                    if (biggestGapInsideQueue > gap) {
+                        idx--;
+                        bricks += biggestGapInsideQueue;
+                    }
                 }
 
                 ladders--;
-                idx--;
             }
 
             return heights.Length;
