@@ -17,7 +17,7 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
 
                 gap = heights[idx + 1] - heights[idx];
                 bricks -= gap;
-                queue.Enqueue(gap, gap);
+                queue.Enqueue(gap, -1 * gap);
 
                 if (bricks < 0) {
                     bricks += queue.Dequeue();
