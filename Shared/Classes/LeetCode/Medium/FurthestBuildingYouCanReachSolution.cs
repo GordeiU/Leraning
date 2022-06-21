@@ -25,7 +25,7 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
                     if (ladders > 0) {
                         ladders--;
                     } else {
-                        return i;
+                        return idx;
                     }
                 }
             }
