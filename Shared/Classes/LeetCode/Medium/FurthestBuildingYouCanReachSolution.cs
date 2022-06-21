@@ -39,7 +39,7 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
                 ladders--;
             }
 
-            return heights.Length;
+            return heights.Length - 1;
         }
     }
 }
