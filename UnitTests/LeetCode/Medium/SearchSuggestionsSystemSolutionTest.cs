@@ -14,7 +14,7 @@ namespace Learning.UnitTests.LeetCode.Medium {
         }
 
         [TestMethod]
-        public void MinDistance_ShortOne() {
+        public void SuggestedProducts_ShortOne() {
             string[] words = new string[] { "mobile", "mouse", "moneypot", "monitor", "mousepad" };
             bool isEqual = false;
 

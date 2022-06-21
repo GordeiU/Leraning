@@ -12,7 +12,7 @@ namespace Learning.UnitTests.LeetCode.Medium {
         }
 
         [TestMethod]
-        public void MinDistance_ShortOne() {
+        public void MinimumLengthEncoding_ShortOne() {
             string[] words = new string[] {"time", "me", "bell" };
 
             int actual = TestingClass.MinimumLengthEncoding(words);
@@ -21,7 +21,7 @@ namespace Learning.UnitTests.LeetCode.Medium {
         }
 
         [TestMethod]
-        public void MinDistance_ShortTwo() {
+        public void MinimumLengthEncoding_ShortTwo() {
             string[] words = new string[] { "time", "me", "bell", "test", "less", "mess", "grass" };
 
             int actual = TestingClass.MinimumLengthEncoding(words);
@@ -30,7 +30,7 @@ namespace Learning.UnitTests.LeetCode.Medium {
         }
 
         [TestMethod]
-        public void MinDistance_ShortThree() {
+        public void MinimumLengthEncoding_ShortThree() {
             string[] words = new string[] { "aab", "bab", "abb" };
 
             int actual = TestingClass.MinimumLengthEncoding(words);
