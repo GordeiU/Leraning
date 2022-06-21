@@ -15,22 +15,17 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
                     continue;
                 }
 
-                if (ladders == 0 && bricks < gap) {
-                    return idx;
-                }
+                gap = heights[idx + 1] - heights[idx];
+                bricks -= gap;
+                queue.Enqueue(gap, gap);
 
-                if (gap <= bricks) {
-                    bricks -= gap;
-                    queue.Enqueue(gap, gap);
-                    continue;
-                }
+                if (bricks < 0) {
+                    bricks += queue.Dequeue();
 
-                if (queue.Count > 0) {
-                    int biggestGapInsideQueue = queue.Dequeue();
-
-                    if (biggestGapInsideQueue > gap) {
-                        idx--;
-                        bricks += biggestGapInsideQueue;
+                    if (ladders > 0) {
+                        ladders--;
+                    } else {
+                        return i;
                     }
                 }
             }
