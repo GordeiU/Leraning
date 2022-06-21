@@ -11,9 +11,6 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
             int gap;
 
             for (int idx = 0; idx < heights.Length - 1; idx++) {
-                gap = heights[idx + 1] - heights[idx];
-
-                if (gap <= 0) {
                     continue;
                 }
 
@@ -35,8 +32,6 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
                         bricks += biggestGapInsideQueue;
                     }
                 }
-
-                ladders--;
             }
 
             return heights.Length - 1;
