@@ -32,5 +32,16 @@ namespace Learning.UnitTests.LeetCode.Medium {
             int expected = 7;
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void FurthestBuilding_ShortThree() {
+            int[] buildingHeights = new int[] { 14, 3, 19, 3 };
+            int bricks = 17;
+            int ladders = 0;
+
+            int actual = TestingClass.FurthestBuilding(buildingHeights, bricks, ladders);
+            int expected = 3;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
