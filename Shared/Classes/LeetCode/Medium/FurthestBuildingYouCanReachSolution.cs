@@ -11,6 +11,7 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
             int gap;
 
             for (int idx = 0; idx < heights.Length - 1; idx++) {
+                if (heights[idx] >= heights[idx + 1]) {
                     continue;
                 }
 
