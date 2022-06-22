@@ -6,7 +6,9 @@ namespace Learning.Shared.Classes.LeetCode.Medium {
     /// </summary>
     public class KthLargestElementArraySolution {
         public int FindKthLargest(int[] numbers, int k) {
-            throw new NotFiniteNumberException();
+            Array.Sort(numbers);
+
+            return numbers[numbers.Length - k];
         }
     }
 }
